@@ -1,7 +1,7 @@
 ---
 title: "Api Gateway Authorizer"
 date: 2021-04-29T22:15:17+01:00
-draft: true
+draft: false
 ---
 
 How to build a GraalVM API Gateway Authorizer using your own Lambda Runtine Interface Client.
