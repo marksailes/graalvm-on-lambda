@@ -17,3 +17,9 @@ disablePathToLower = true
   [markup.tableOfContents]
     startLevel = 1
     endLevel = 9
+
+[params]
+
+  # (Optional, default none) Set source repository location. Used for 'Edit this page' links.
+  # You can also specify this parameter per page in front matter.
+  geekdocRepo = "https://github.com/marksailes/graalvm-on-lambda"
