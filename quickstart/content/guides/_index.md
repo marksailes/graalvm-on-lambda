@@ -4,16 +4,23 @@ draft: false
 ---
 
 {{< columns >}}
-# AWS Quarkus Demo
+# [AWS Quarkus Demo](https://github.com/aws-samples/aws-quarkus-demo/)
 <img src="/guides/aws-quarkus-demo.png" alt="demo" class="img-responsive">
 
-<---> <!-- magic sparator, between columns -->
+A sample application demonstrating API Gateway -> Lambda -> DynamoDB using the Quarkus Framework.
 
-# API Gateway Authorizer
-<img src="/guides/kabisa-tech-blog.png" alt="demo" class="img-responsive">
+<--->
 
-<---> <!-- magic sparator, between columns -->
+# [API Gateway Authorizer](https://www.kabisa.nl/tech/beat-java-cold-starts-in-aws-lambdas-with-graalvm/)
+<img src="/guides/kabisa-tech-blog.png" alt="api gateway authorizer" class="img-responsive">
 
-# Something else
+A practical walk through of building an API Gateway Authorizer, including the full [source code](https://github.com/VR4J/aws-enriching-lambda-authorizer).
+
+<--->
+
+# [Cloudway.be Benchmark](https://www.cloudway.be/blog/gramba-graalvm-native-image-runtime-and-toolchain-aws-lambda)
+<img src="/guides/cloudway-gramba.png" alt="graalvm benchmark" class="img-responsive">
+
+An analysis of a real world application with and without GraalVM native-image.
 
 {{< /columns >}}
