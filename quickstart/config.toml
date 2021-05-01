@@ -20,11 +20,15 @@ disablePathToLower = true
 
 [params]
 
+  # (Optional, default true) Show a breadcrumb navigation bar at the top of each docs page.
+  # You can also specify this parameter per page in front matter.
+  geekdocBreadcrumb = false
+
   # (Optional, default none) Set source repository location. Used for 'Edit this page' links.
   # You can also specify this parameter per page in front matter.
-  geekdocRepo = "https://github.com/marksailes/graalvm-on-lambda"
+#   geekdocRepo = "https://github.com/marksailes/graalvm-on-lambda"
 
   # (Optional, default none) Enable 'Edit this page' links. Requires 'GeekdocRepo' param
   # and path must point to 'content' directory of repo.
   # You can also specify this parameter per page in front matter.
-  geekdocEditPath = "edit/main/quickstart/content"
+#   geekdocEditPath = "edit/main/quickstart/content"
