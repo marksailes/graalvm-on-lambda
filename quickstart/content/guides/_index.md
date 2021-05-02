@@ -9,9 +9,9 @@ draft: false
 # [AWS Quarkus Demo](https://github.com/aws-samples/aws-quarkus-demo/)
 <img src="/guides/aws-quarkus-demo.png" alt="demo" class="img-responsive">
 
-<span><img src="/aws/Arch_App-Integration/Arch_32/Arch_Amazon-API-Gateway_32.svg" alt="Amazon API Gateway"></span>
-<span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" alt="AWS Lambda"></span>
-<span><img src="/aws/Arch_Database/32/Arch_Amazon-DynamoDB_32.svg" alt="Amazon DynamoDB"></span>
+<span><img src="/aws/Arch_App-Integration/Arch_32/Arch_Amazon-API-Gateway_32.svg" title="Amazon API Gateway"></span>
+<span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
+<span><img src="/aws/Arch_Database/32/Arch_Amazon-DynamoDB_32.svg" title="Amazon DynamoDB"></span>
 
 A sample application demonstrating API Gateway -> Lambda -> DynamoDB using the Quarkus Framework.
 
@@ -20,8 +20,8 @@ A sample application demonstrating API Gateway -> Lambda -> DynamoDB using the Q
 # [API Gateway Authorizer](https://www.kabisa.nl/tech/beat-java-cold-starts-in-aws-lambdas-with-graalvm/)
 <img src="/guides/kabisa-tech-blog.png" alt="api gateway authorizer" class="img-responsive">
 
-<span><img src="/aws/Arch_App-Integration/Arch_32/Arch_Amazon-API-Gateway_32.svg"></span>
-<span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg"></span>
+<span><img src="/aws/Arch_App-Integration/Arch_32/Arch_Amazon-API-Gateway_32.svg" title="Amazon API Gateway"></span>
+<span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
 
 A practical walk through of building an API Gateway Authorizer, including the full [source code](https://github.com/VR4J/aws-enriching-lambda-authorizer).
 
