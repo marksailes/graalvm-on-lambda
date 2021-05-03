@@ -8,11 +8,11 @@ All the advantages of AWS Lambda, with none of the disadvantages of Java cold st
 {{< columns >}} 
 # Fast Cold Starts
 
-<---> <!-- magic sparator, between columns -->
+<--->
 
 # Low Memory Usage
 
-<---> <!-- magic sparator, between columns -->
+<--->
 
 # Enormous Java Community
 

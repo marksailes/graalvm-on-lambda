@@ -3,7 +3,7 @@ date: 2021-04-29T21:21:46+01:00
 draft: false
 ---
 
-{{< button href="https://github.com/marksailes/graalvm-on-lambda/issues/new?assignees=marksailes&labels=&template=new-guide-submission.md&title=New+guide+suggestion" >}}Submit a guide{{< /button >}}
+{{< button href="https://github.com/marksailes/graalvm-on-lambda/issues/new?assignees=marksailes&labels=&template=new-guide-submission.md&title=New+guide+suggestion" >}}Submit an example{{< /button >}}
 
 {{< columns >}}
 # [AWS Quarkus Demo](https://github.com/aws-samples/aws-quarkus-demo/)
