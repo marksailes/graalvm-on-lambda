@@ -1,5 +1,5 @@
 baseURL = "https://graalvmonlambda.com"
-title = "GraalVM on Lambda"
+# title = "GraalVM on Lambda"
 theme = "hugo-geekdoc"
 
 pluralizeListTitles = false
@@ -19,6 +19,9 @@ disablePathToLower = true
     endLevel = 9
 
 [params]
+  # (Optional, default static/brand.svg) Set the path to a logo for the Geekdoc
+  # relative to your 'static/' folder.
+  geekdocLogo = "aws/Arch_Compute/32/Arch_AWS-Lambda_32.png"
 
   # (Optional, default true) Show a breadcrumb navigation bar at the top of each docs page.
   # You can also specify this parameter per page in front matter.
