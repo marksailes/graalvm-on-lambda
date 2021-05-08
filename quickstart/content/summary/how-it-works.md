@@ -5,4 +5,18 @@ draft: false
 weight: 30
 ---
 
-Like this
+# On a managed Java Runtime
+
+For example the managed Java runtimes (Java 8, Java 8 Corretto and Java 11) you supply your code as a .zip or a .jar. 
+AWS provisions a FireCracker MicroVM, downloads your code to it, starts the JVM and loads your code. On your
+behalf an AWS managed implementation of the [Runtime API](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-api.html)
+is asking Lambda for the next event to process.
+
+<img src="/summary/java-runtime.png" alt="demo" class="img-responsive">
+
+# Using GraalVM
+
+When using a GraalVM native image you no longer want or need the managed Java runtimes. Instead you want the ability to
+directly decision what is executed. This functionality is enabled by the `provided` 
+
+<img src="/summary/managed-runtime.png" alt="demo" class="img-responsive">
