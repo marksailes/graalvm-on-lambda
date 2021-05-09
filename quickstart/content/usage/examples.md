@@ -34,3 +34,20 @@ A practical walk through of building an API Gateway Authorizer, including the fu
 An analysis of a real world application with and without GraalVM native-image.
 
 {{< /columns >}}
+
+{{< columns >}}
+# [AWS Lambda with Scala and GraalVM](https://medium.com/@mateuszstankiewicz/aws-lambda-with-scala-and-graalvm-eb1cc46b7740)
+<img src="/usage/examples/aws-lambda-with-scala-and-graalvm.png" alt="AWS Lambda with Scala and GraalVM" class="img-responsive">
+
+<span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
+<span><img src="/icons/scala-spiral.png" title="Scala"></span>
+
+[Mateusz Stankiewicz](https://medium.com/@mateuszstankiewicz) discusses the step-by-step process he took in creating a 
+Scala Lambda function to handle a maintenance job on a database. He uses a bash script to poll the Runtime API.
+
+
+<--->
+
+<--->
+
+{{< /columns >}}
