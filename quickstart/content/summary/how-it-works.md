@@ -5,7 +5,7 @@ draft: false
 weight: 30
 ---
 
-# On a managed Java Runtime
+# Lambda with a Managed Java Runtime
 
 For example the managed Java runtimes (Java 8, Java 8 Corretto and Java 11) you supply your code as a .zip or a .jar. 
 AWS provisions a FireCracker MicroVM, downloads your code to it, starts the JVM and loads your code. On your
@@ -14,7 +14,7 @@ is asking Lambda for the next event to process.
 
 <img src="/summary/java-runtime.png" alt="demo" class="img-responsive">
 
-# Using GraalVM
+# Using GraalVM with a Provided Runtime
 
 When using a GraalVM native image you no longer want or need the managed Java runtimes. Instead you want the ability to
 directly decision what is executed. This functionality is enabled by the `provided` 
