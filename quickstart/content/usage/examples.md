@@ -7,8 +7,7 @@ weight: 30
 {{< button href="https://github.com/marksailes/graalvm-on-lambda/issues/new?assignees=marksailes&labels=&template=new-guide-submission.md&title=New+guide+suggestion" >}}Submit an example{{< /button >}}
 
 {{< columns >}}
-# [AWS Quarkus Demo](https://github.com/aws-samples/aws-quarkus-demo/)
-<img src="/guides/aws-quarkus-demo.png" alt="demo" class="img-responsive">
+[<img src="/guides/aws-quarkus-demo.png" alt="demo" class="img-responsive">](https://github.com/aws-samples/aws-quarkus-demo/)
 
 <span><img src="/aws/Arch_App-Integration/Arch_32/Arch_Amazon-API-Gateway_32.svg" title="Amazon API Gateway"></span>
 <span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
@@ -17,9 +16,7 @@ weight: 30
 A sample application demonstrating API Gateway -> Lambda -> DynamoDB using the Quarkus Framework.
 
 <--->
-
-# [API Gateway Authorizer](https://www.kabisa.nl/tech/beat-java-cold-starts-in-aws-lambdas-with-graalvm/)
-<img src="/guides/kabisa-tech-blog.png" alt="api gateway authorizer" class="img-responsive">
+[<img src="/guides/kabisa-tech-blog.png" alt="api gateway authorizer" class="img-responsive">](https://www.kabisa.nl/tech/beat-java-cold-starts-in-aws-lambdas-with-graalvm/)
 
 <span><img src="/aws/Arch_App-Integration/Arch_32/Arch_Amazon-API-Gateway_32.svg" title="Amazon API Gateway"></span>
 <span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
@@ -27,17 +24,14 @@ A sample application demonstrating API Gateway -> Lambda -> DynamoDB using the Q
 A practical walk through of building an API Gateway Authorizer, including the full [source code](https://github.com/VR4J/aws-enriching-lambda-authorizer).
 
 <--->
-
-# [Cloudway.be Benchmark](https://www.cloudway.be/blog/gramba-graalvm-native-image-runtime-and-toolchain-aws-lambda)
-<img src="/guides/cloudway-gramba.png" alt="graalvm benchmark" class="img-responsive">
+[<img src="/guides/cloudway-gramba.png" alt="graalvm benchmark" class="img-responsive">](https://www.cloudway.be/blog/gramba-graalvm-native-image-runtime-and-toolchain-aws-lambda)
 
 An analysis of a real world application with and without GraalVM native-image.
 
 {{< /columns >}}
 
 {{< columns >}}
-# [AWS Lambda with Scala and GraalVM](https://medium.com/@mateuszstankiewicz/aws-lambda-with-scala-and-graalvm-eb1cc46b7740)
-<img src="/usage/examples/aws-lambda-with-scala-and-graalvm.png" alt="AWS Lambda with Scala and GraalVM" class="img-responsive">
+[<img src="/usage/examples/aws-lambda-with-scala-and-graalvm.png" alt="AWS Lambda with Scala and GraalVM" class="img-responsive">](https://medium.com/@mateuszstankiewicz/aws-lambda-with-scala-and-graalvm-eb1cc46b7740)
 
 <span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
 <span><img src="/icons/scala-spiral.png" title="Scala"></span>
@@ -45,8 +39,15 @@ An analysis of a real world application with and without GraalVM native-image.
 [Mateusz Stankiewicz](https://medium.com/@mateuszstankiewicz) discusses the step-by-step process he took in creating a 
 Scala Lambda function to handle a maintenance job on a database. He uses a bash script to poll the Runtime API.
 
-
 <--->
+[<img src="/usage/examples/tackling-java-cold-startup-times.png" alt="Tackling Java cold startup times on AWS Lambda with GraalVM" class="img-responsive">](https://arnoldgalovics.com/tackling-java-cold-startup-times-on-aws-lambda-with-graalvm/)
+
+<span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
+<span><img src="/aws/Arch_Database/32/Arch_Amazon-DynamoDB_32.svg" title="Amazon DynamoDB"></span>
+
+[Arnold Galovics](https://twitter.com/ArnoldGalovics) 
+
+[GitHub Repo](https://github.com/redskap/aws-lambda-java-runtime)
 
 <--->
 
