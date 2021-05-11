@@ -50,5 +50,16 @@ Scala Lambda function to handle a maintenance job on a database. He uses a bash 
 [GitHub Repo](https://github.com/redskap/aws-lambda-java-runtime)
 
 <--->
+[<img src="/usage/examples/fast-cold-starts-for-clojure.png" alt="Fast Cold Starts for Clojure in AWS Lambda using GraalVM native-image" class="img-responsive">](https://nitor.com/en/articles/fast-cold-starts-for-clojure-in-aws-lambda-using-graalvm-native-image)
+
+<span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
+<span><img src="/icons/32px-Clojure_logo.svg.png" title="Clojure"></span>
+<span><img src="/icons/terraform-icon.png" title="Terraform" width="32px"></span>
+
+[Esko Luontola](https://twitter.com/EskoLuontola) takes us step by step how he packages his native images into a container
+images and runs it on AWS Lambda. His project uses the [AWS Runtime Interface Client](https://github.com/aws/aws-lambda-java-libs/tree/master/aws-lambda-java-runtime-interface-client).
+All his project code is available on Github.
+
+[GitHub Repo](https://github.com/luontola/native-clojure-lambda)
 
 {{< /columns >}}
