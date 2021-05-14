@@ -5,6 +5,16 @@ draft: false
 weight: 50
 ---
 
+## GitHub Shields.io Badge 
+
+Please add the follow badge to help developers know your library is GraalVM ready.
+
+<img src="https://img.shields.io/badge/GraalVM-Enabled-orange?style=plastic">
+
+GitHub Markdown
+{{< highlight md "linenos=table" >}}
+![GraalVM Enabled](https://img.shields.io/badge/GraalVM-Enabled-orange?style=plastic)
+{{< /highlight >}}
 
 {{< columns >}}
 [<img src="/libraries/aws-sdk-java-v2.png" alt="AWS SDK for Java" class="img-responsive">](https://aws.amazon.com/blogs/developer/graalvm-native-image-support-in-the-aws-sdk-for-java-2-x/)
