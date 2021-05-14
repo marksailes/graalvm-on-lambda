@@ -1,5 +1,5 @@
 baseURL = "https://graalvmonlambda.com"
-# title = "GraalVM on Lambda"
+title = "GraalVM on Lambda"
 theme = "hugo-geekdoc"
 
 pluralizeListTitles = false
