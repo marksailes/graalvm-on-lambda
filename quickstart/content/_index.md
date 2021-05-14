@@ -17,18 +17,3 @@ All the advantages of AWS Lambda, with none of the disadvantages of Java cold st
 # Enormous Java Community
 
 {{< /columns >}}
-
-# Application Frameworks
-
-{{< columns >}}
-# Micronaut
-
-<---> <!-- magic sparator, between columns -->
-
-# Quarkus
-
-<---> <!-- magic sparator, between columns -->
-
-# Spring Native
-
-{{< /columns >}}
