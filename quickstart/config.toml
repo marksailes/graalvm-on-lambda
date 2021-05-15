@@ -35,3 +35,7 @@ disablePathToLower = true
   # and path must point to 'content' directory of repo.
   # You can also specify this parameter per page in front matter.
 #   geekdocEditPath = "edit/main/quickstart/content"
+
+  # Twitter card configuration - https://gohugo.io/templates/internal/#twitter-cards
+  description = "Building with GraalVM on Lambda"
+  images = ["site-feature-image.png"]
