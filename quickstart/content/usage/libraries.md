@@ -3,6 +3,8 @@ title: "Libraries"
 date: 2021-04-29T22:18:57+01:00
 draft: false
 weight: 50
+title: GraalVM on Lambda
+description: Libraries for GraalVM on AWS Lambda
 ---
 
 ## GitHub Shields.io Badge 

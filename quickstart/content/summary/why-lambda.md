@@ -3,6 +3,8 @@ title: "Why Lambda"
 date: 2021-05-08T12:19:49+01:00
 draft: false
 weight: 10
+title: GraalVM on Lambda
+description: Why should you use AWS Lambda
 ---
 
 AWS Lambda is a fully managed compute service which allows you to focus on delivering value, and leaves all the

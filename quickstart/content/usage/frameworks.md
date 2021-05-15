@@ -3,6 +3,8 @@ title: "Frameworks"
 date: 2021-04-29T21:21:46+01:00
 draft: false
 weight: 40
+title: GraalVM on Lambda
+description: Frameworks for developing GraalVM on AWS Lambda
 ---
 
 Reducing the friction of developing with GraalVM are a number of frameworks.
