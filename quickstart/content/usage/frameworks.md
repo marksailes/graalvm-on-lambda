@@ -1,6 +1,6 @@
 ---
-title: "Frameworks"
-description: "Frameworks for developing GraalVM on AWS Lambda"
+title: "Frameworks for developing GraalVM on AWS Lambda"
+description: "Descriptions of the three main frameworks used in the development of GraalVM on AWS Lambda"
 date: 2021-04-29T21:21:46+01:00
 draft: false
 weight: 40

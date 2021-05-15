@@ -1,6 +1,6 @@
 ---
-title: "Libraries"
-description: "Libraries for GraalVM on AWS Lambda"
+title: "Libraries ready for GraalVM"
+description: "A List of known libraries which are ready for GraalVM on AWS Lambda"
 date: 2021-04-29T22:18:57+01:00
 draft: false
 weight: 50
@@ -15,6 +15,13 @@ Please add the follow badge to help developers know your library is GraalVM read
 GitHub Markdown
 {{< highlight md "linenos=table" >}}
 ![GraalVM Enabled](https://img.shields.io/badge/GraalVM-Enabled-orange?style=plastic)
+{{< /highlight >}}
+
+<img src="https://img.shields.io/badge/GraalVM-Ready-orange?style=plastic">
+
+GitHub Markdown
+{{< highlight md "linenos=table" >}}
+![GraalVM Enabled](https://img.shields.io/badge/GraalVM-Ready-orange?style=plastic)
 {{< /highlight >}}
 
 {{< columns >}}

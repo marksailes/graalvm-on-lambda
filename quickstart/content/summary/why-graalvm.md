@@ -1,6 +1,6 @@
 ---
-title: "Why Graalvm"
-description: "Why should you use GraalVM"
+title: "Why should you use GraalVM"
+description: "Java is an enormously popular programming language for business applications."
 date: 2021-05-08T12:19:54+01:00
 draft: false
 weight: 20

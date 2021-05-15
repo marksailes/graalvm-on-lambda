@@ -19,6 +19,8 @@ disablePathToLower = true
     endLevel = 9
 
 [params]
+  geekdocMenuBundle = true
+
   # (Optional, default static/brand.svg) Set the path to a logo for the Geekdoc
   # relative to your 'static/' folder.
   geekdocLogo = "aws/Arch_Compute/32/Arch_AWS-Lambda_32.png"

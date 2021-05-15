@@ -1,6 +1,6 @@
 ---
-title: "Examples"
-description: "Examples showing GraalVM on AWS Lambda"
+title: "Examples showing GraalVM on AWS Lambda"
+description: "Examples showing various implementations of GraalVM native image deployed to AWS Lambda"
 date: 2021-04-29T21:21:46+01:00
 draft: false
 weight: 30

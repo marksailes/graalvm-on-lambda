@@ -1,6 +1,7 @@
 ---
-title: "Why Lambda"
-description: "Why should you use AWS Lambda"
+title: "Why should you use AWS Lambda"
+description: "AWS Lambda is a fully managed compute service which allows you to focus on delivering value, and leaves all the
+maintenance overhead to AWS."
 date: 2021-05-08T12:19:49+01:00
 draft: false
 weight: 10

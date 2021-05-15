@@ -1,0 +1,19 @@
+---
+main:
+  - name: Summary
+    icon: "notification"
+    sub:
+      - name: Why GraalVM
+        ref: "/summary/why-graalvm"
+      - name: Why Lambda
+        ref: "/summary/why-lambda"
+      - name: How it works
+        ref: "/summary/how-it-works"
+  - name: Usage
+    sub:
+      - name: Examples
+        ref: "/usage/examples"
+      - name: Frameworks
+        ref: "/usage/frameworks"
+      - name: Libraries
+        ref: "/usage/libraries"
