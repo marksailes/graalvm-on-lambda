@@ -9,13 +9,16 @@ weight: 30
 {{< button href="https://github.com/marksailes/graalvm-on-lambda/issues/new?assignees=marksailes&labels=&template=new-guide-submission.md&title=New+guide+suggestion" >}}Submit an example{{< /button >}}
 
 {{< columns >}}
-[<img src="/guides/aws-quarkus-demo.png" alt="demo" class="img-responsive">](https://github.com/aws-samples/aws-quarkus-demo/)
+[<img src="/guides/aws-quarkus-demo.png" alt="demo" class="img-responsive">](https://aws.amazon.com/blogs/architecture/field-notes-optimize-your-java-application-for-aws-lambda-with-quarkus/)
 
 <span><img src="/aws/Arch_App-Integration/Arch_32/Arch_Amazon-API-Gateway_32.svg" title="Amazon API Gateway"></span>
 <span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
 <span><img src="/aws/Arch_Database/32/Arch_Amazon-DynamoDB_32.svg" title="Amazon DynamoDB"></span>
+<span><img src="/aws/sam_squirrel.jpeg" title="AWS SAM" width="32"></span>
 
-A sample application demonstrating API Gateway -> Lambda -> DynamoDB using the Quarkus Framework.
+This blog post shows you an effective approach for implementing a Java-based application and compiling it into a native-image through Quarkus.
+
+[<img src="/github/GitHub-Mark-32px.png">](https://github.com/aws-samples/aws-quarkus-demo/)
 
 <--->
 [<img src="/guides/kabisa-tech-blog.png" alt="api gateway authorizer" class="img-responsive">](https://www.kabisa.nl/tech/beat-java-cold-starts-in-aws-lambdas-with-graalvm/)
@@ -23,10 +26,14 @@ A sample application demonstrating API Gateway -> Lambda -> DynamoDB using the Q
 <span><img src="/aws/Arch_App-Integration/Arch_32/Arch_Amazon-API-Gateway_32.svg" title="Amazon API Gateway"></span>
 <span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
 
-A practical walk through of building an API Gateway Authorizer, including the full [source code](https://github.com/VR4J/aws-enriching-lambda-authorizer).
+A practical walk through of building an API Gateway Authorizer, including the full source code.
+
+[<img src="/github/GitHub-Mark-32px.png">](https://github.com/VR4J/aws-enriching-lambda-authorizer)
 
 <--->
 [<img src="/guides/cloudway-gramba.png" alt="graalvm benchmark" class="img-responsive">](https://www.cloudway.be/blog/gramba-graalvm-native-image-runtime-and-toolchain-aws-lambda)
+
+<span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
 
 An analysis of a real world application with and without GraalVM native-image.
 
