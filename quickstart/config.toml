@@ -37,5 +37,10 @@ disablePathToLower = true
 #   geekdocEditPath = "edit/main/quickstart/content"
 
   # Twitter card configuration - https://gohugo.io/templates/internal/#twitter-cards
-  description = "Building with GraalVM on Lambda"
+  title = "GraalVM on Lambda"
+  description = "Building with GraalVM on AWS Lambda"
   images = ["site-feature-image.png"]
+
+  # Open Graph - https://gohugo.io/templates/internal/#configure-open-graph
+[taxonomies]
+  series = "series"
