@@ -1,9 +1,9 @@
 ---
 title: "Why Graalvm"
+description: "Why should you use GraalVM"
 date: 2021-05-08T12:19:54+01:00
 draft: false
 weight: 20
-description: Why should you use GraalVM
 ---
 
 Java is an enormously popular programming language for business applications. These applications have typically run on

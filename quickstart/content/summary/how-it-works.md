@@ -1,9 +1,9 @@
 ---
 title: "How It Works"
+description: "How GraalVM works on AWS Lambda"
 date: 2021-05-08T12:30:39+01:00
 draft: false
 weight: 30
-description: How GraalVM works on AWS Lambda
 ---
 
 # Lambda with a Managed Java Runtime
