@@ -1,7 +1,13 @@
+/* Global customization */
+
+:root {
+  --code-max-height: 60rem;
+}
+
 /* Light mode theming */
 :root,
 :root[color-mode="light"] {
-  --header-background: #232f3e;
+  --header-background: #8d99ae;
   --header-font-color: #ffffff;
 
   --body-background: #ffffff;
@@ -24,12 +30,12 @@
 
   --footer-background: #2f333e;
   --footer-font-color: #ffffff;
-  --footer-link-color: #ffcc5c;
-  --footer-link-color-visited: #ffcc5c;
+  --footer-link-color: #edf2f4;
+  --footer-link-color-visited: #edf2f4;
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --header-background: #232f3e;
+    --header-background: #4ec58a;
     --header-font-color: #ffffff;
 
     --body-background: #ffffff;
