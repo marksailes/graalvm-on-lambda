@@ -54,7 +54,9 @@ Scala Lambda function to handle a maintenance job on a database. He uses a bash 
 <span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
 <span><img src="/aws/Arch_Database/32/Arch_Amazon-DynamoDB_32.svg" title="Amazon DynamoDB"></span>
 
-[Arnold Galovics](https://twitter.com/ArnoldGalovics) 
+[Arnold Galovics](https://twitter.com/ArnoldGalovics) Writes an amazingly detailed piece about how he put together the 
+puzzle of GraalVM on Lambda. Details of the Dockerfile he used to compile the native image as well as performance data. 
+It really is a great read.
 
 [<img src="/github/GitHub-Mark-32px.png">](https://github.com/redskap/aws-lambda-java-runtime)
 
