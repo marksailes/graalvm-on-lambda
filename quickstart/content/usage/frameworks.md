@@ -32,3 +32,20 @@ Spring Native is still in beta, but one to keep an eye on for the future.
 [<img src="/github/GitHub-Mark-32px.png">](https://github.com/spring-projects-experimental/spring-native)
 
 {{< /columns >}}
+
+{{< columns >}}
+
+[<img src="holy-lambda.png">](https://cljdoc.org/d/fierycod/holy-lambda/CURRENT/doc/tutorial)
+
+A micro framework that integrates Clojure with AWS Lambda on either Java, Clojure Native, or Babashka runtime.
+
+[<img src="/github/GitHub-Mark-32px.png">](https://github.com/FieryCod/holy-lambda)
+
+<--->
+
+
+
+<--->
+
+
+{{< /columns >}}
