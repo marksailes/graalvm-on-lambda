@@ -2,7 +2,7 @@
 title: "Building a GraalVM native binary for Amazon Linux 2 with Docker"
 description: "How to use Docker to build a GraalVM native binary for Amazon Linux 2"
 date: 2021-04-29T21:21:46+01:00
-draft: true
+draft: false
 weight: 10
 ---
 
