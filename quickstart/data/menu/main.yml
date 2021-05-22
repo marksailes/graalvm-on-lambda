@@ -9,6 +9,10 @@ main:
         ref: "/summary/why-lambda"
       - name: How it works
         ref: "/summary/how-it-works"
+  - name: Building
+    sub:
+      - name: with Docker
+        ref: "/building/docker"
   - name: Usage
     sub:
       - name: Examples
