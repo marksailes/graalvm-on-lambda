@@ -15,5 +15,5 @@ This implementation is used in the managed Java runtimes and therefore is known 
 for all the features and highly optimized for performance.
 
 When deciding which implementation to use, make sure that the events you want to integrate with are supported. Most
-common are clients which can handle String or Amazon API Gateway events.
+common are clients which can only handle String or Amazon API Gateway events.
 
