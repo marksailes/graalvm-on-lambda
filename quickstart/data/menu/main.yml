@@ -13,6 +13,8 @@ main:
     sub:
       - name: with Docker
         ref: "/building/docker"
+      - name: which Runtime API
+        ref: "/building/runtime-interface-client"
   - name: Usage
     sub:
       - name: Examples
