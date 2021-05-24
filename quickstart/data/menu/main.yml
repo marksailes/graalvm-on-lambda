@@ -9,6 +9,13 @@ main:
         ref: "/summary/why-lambda"
       - name: How it works
         ref: "/summary/how-it-works"
+  - name: Walk Through
+    ref: "/walkthrough/"
+    sub:
+      - name: Project Structure
+        ref: "/walkthrough/project-structure"
+      - name: Function Creation
+        ref: "/walkthrough/function"
   - name: Building
     sub:
       - name: with Docker
