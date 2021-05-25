@@ -80,4 +80,22 @@ public class ProductRequestHandler implements RequestHandler<APIGatewayV2HTTPEve
 }
 ```
 
+Giving us a project looking something like this.
+
+```
+serverless-graalvm/
+├── infrastructure
+└── software
+    └── products
+        ├── pom.xml
+        └── src
+            └── main
+                └── java
+                    └── com
+                        └── graalvmonlambda
+                            └── product
+                                └── ProductRequestHandler.java
+```
+
+
 Let's get this deployed and working before we go any further.

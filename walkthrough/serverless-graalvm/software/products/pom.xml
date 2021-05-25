@@ -33,7 +33,7 @@
                 <version>3.2.4</version>
                 <configuration>
                     <createDependencyReducedPom>false</createDependencyReducedPom>
-                    <finalName>function</finalName>
+                    <finalName>product</finalName>
                 </configuration>
                 <executions>
                     <execution>

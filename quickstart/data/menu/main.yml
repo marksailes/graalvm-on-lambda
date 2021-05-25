@@ -9,13 +9,15 @@ main:
         ref: "/summary/why-lambda"
       - name: How it works
         ref: "/summary/how-it-works"
-  - name: Walk Through
+  - name: Walk Through - Public API
     ref: "/walkthrough/"
     sub:
       - name: Project Structure
         ref: "/walkthrough/project-structure"
       - name: Function Creation
         ref: "/walkthrough/function"
+      - name: Infrastructure as Code (CDK)
+        ref: "/walkthrough/initial-infra"
   - name: Building
     sub:
       - name: with Docker
