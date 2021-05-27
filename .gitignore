@@ -1,3 +1,4 @@
 /.idea/
 /.gradle/
 /walkthrough/serverless-graalvm/software/products/products.iml
+/walkthrough/serverless-graalvm/software/products/target/
