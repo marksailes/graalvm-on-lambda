@@ -41,9 +41,7 @@ We'll rename the packages and add a Lambda function and API Gateway (HTTP API) t
 ```java
 package com.graalvmonlambda.infra;
 
-import software.amazon.awscdk.core.Construct;
-import software.amazon.awscdk.core.Stack;
-import software.amazon.awscdk.core.StackProps;
+import software.amazon.awscdk.core.*;
 import software.amazon.awscdk.services.apigatewayv2.*;
 import software.amazon.awscdk.services.apigatewayv2.integrations.LambdaProxyIntegration;
 import software.amazon.awscdk.services.apigatewayv2.integrations.LambdaProxyIntegrationProps;
@@ -51,6 +49,7 @@ import software.amazon.awscdk.services.lambda.Code;
 import software.amazon.awscdk.services.lambda.Function;
 import software.amazon.awscdk.services.lambda.FunctionProps;
 import software.amazon.awscdk.services.lambda.Runtime;
+import software.amazon.awscdk.services.logs.RetentionDays;
 
 import static java.util.Collections.singletonList;
 
@@ -67,6 +66,7 @@ public class InfrastructureStack extends Stack {
                 .code(Code.fromAsset("../software/products/target/product.jar"))
                 .handler("com.graalvmonlambda.product.ProductRequestHandler")
                 .memorySize(1024)
+                .logRetention(RetentionDays.ONE_WEEK)
                 .build());
 
         HttpApi httpApi = new HttpApi(this, "GraalVMOnLambdaAPI", HttpApiProps.builder()
@@ -81,8 +81,14 @@ public class InfrastructureStack extends Stack {
                         .payloadFormatVersion(PayloadFormatVersion.VERSION_2_0)
                         .build()))
                 .build());
+
+        CfnOutput apiUrl = new CfnOutput(this, "ProductApiUrl", CfnOutputProps.builder()
+                .exportName("ProductApiUrl")
+                .value(httpApi.getApiEndpoint())
+                .build());
     }
 }
+
 ```
 
 This will require a couple of extra CDK dependencies in your `pom.xml`.
@@ -115,3 +121,15 @@ Now you're ready to deploy
 cdk deploy
 ```
 
+You should see your API Gateway endpoint in the outputs.
+
+```bash
+Outputs:
+InfrastructureStack.ProductApiUrl = https://xxxxxxxxxx.execute-api.eu-west-1.amazonaws.com
+```
+
+We can curl the output url to validate everything is ok.
+
+```bash
+curl -v https://xxxxxxxxxx.execute-api.eu-west-1.amazonaws.com/product
+```

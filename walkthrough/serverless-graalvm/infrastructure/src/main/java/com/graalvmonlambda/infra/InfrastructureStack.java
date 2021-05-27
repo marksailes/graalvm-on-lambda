@@ -1,8 +1,6 @@
 package com.graalvmonlambda.infra;
 
-import software.amazon.awscdk.core.Construct;
-import software.amazon.awscdk.core.Stack;
-import software.amazon.awscdk.core.StackProps;
+import software.amazon.awscdk.core.*;
 import software.amazon.awscdk.services.apigatewayv2.*;
 import software.amazon.awscdk.services.apigatewayv2.integrations.LambdaProxyIntegration;
 import software.amazon.awscdk.services.apigatewayv2.integrations.LambdaProxyIntegrationProps;
@@ -10,6 +8,7 @@ import software.amazon.awscdk.services.lambda.Code;
 import software.amazon.awscdk.services.lambda.Function;
 import software.amazon.awscdk.services.lambda.FunctionProps;
 import software.amazon.awscdk.services.lambda.Runtime;
+import software.amazon.awscdk.services.logs.RetentionDays;
 
 import static java.util.Collections.singletonList;
 
@@ -26,6 +25,7 @@ public class InfrastructureStack extends Stack {
                 .code(Code.fromAsset("../software/products/target/product.jar"))
                 .handler("com.graalvmonlambda.product.ProductRequestHandler")
                 .memorySize(1024)
+                .logRetention(RetentionDays.ONE_WEEK)
                 .build());
 
         HttpApi httpApi = new HttpApi(this, "GraalVMOnLambdaAPI", HttpApiProps.builder()
@@ -39,6 +39,11 @@ public class InfrastructureStack extends Stack {
                         .handler(productFunction)
                         .payloadFormatVersion(PayloadFormatVersion.VERSION_2_0)
                         .build()))
+                .build());
+
+        CfnOutput apiUrl = new CfnOutput(this, "ProductApiUrl", CfnOutputProps.builder()
+                .exportName("ProductApiUrl")
+                .value(httpApi.getApiEndpoint())
                 .build());
     }
 }
