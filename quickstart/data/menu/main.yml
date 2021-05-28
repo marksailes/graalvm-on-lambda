@@ -18,6 +18,8 @@ main:
         ref: "/walkthrough/function"
       - name: Infrastructure as Code (CDK)
         ref: "/walkthrough/initial-infra"
+      - name: Convert function to GraalVM
+        ref: "/walkthrough/convert-to-graalvm"
   - name: Building
     sub:
       - name: with Docker
