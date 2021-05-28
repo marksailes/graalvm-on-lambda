@@ -1,5 +1,6 @@
 ---
 title: "Infrastucture as Code (CDK)"
+description: "How to define, deploy and test your Lambda function with CDK"
 date: 2021-05-24T22:21:27+01:00
 draft: false
 weight: 30

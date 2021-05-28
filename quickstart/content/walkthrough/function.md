@@ -1,5 +1,6 @@
 ---
-title: "Project Structure"
+title: "Initial Lambda handler function"
+description: "Simple Lambda handler function to respond to an API Gateway event"
 date: 2021-05-24T22:21:27+01:00
 draft: false
 weight: 20

@@ -1,5 +1,6 @@
 ---
 title: "Project Structure"
+description: "Initial project structure for Java Lambda functions and CDK IaC"
 date: 2021-05-24T22:21:27+01:00
 draft: false
 weight: 10

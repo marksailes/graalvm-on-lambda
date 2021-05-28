@@ -1,7 +1,9 @@
 ---
 title: "Convert the Lambda function to GraalVM native-image"
+description: "How to convert Lambda functions to GraalVM native-image"
 date: 2021-05-27T22:15:40+01:00
 draft: true
+weight: 40
 ---
 
 There are a series of changes that will need to be made in order for this project to produce a 
