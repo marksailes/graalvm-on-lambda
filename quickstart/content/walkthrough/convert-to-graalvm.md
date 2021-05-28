@@ -1,11 +1,16 @@
 ---
-title: "Convert to Graalvm"
+title: "Convert the Lambda function to GraalVM native-image"
 date: 2021-05-27T22:15:40+01:00
 draft: true
 ---
 
 There are a series of changes that will need to be made in order for this project to produce a 
 suitable native binary which can be run on AWS Lambda.
+
+### Prerequisites
+
+- Install [GraalVM](https://www.graalvm.org/downloads/) 
+- Install [native-image](https://www.graalvm.org/reference-manual/native-image/#install-native-image) tool.
 
 ### Add the GraalVM native image build plugin.
 

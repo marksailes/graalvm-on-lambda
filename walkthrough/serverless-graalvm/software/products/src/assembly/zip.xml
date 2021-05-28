@@ -8,13 +8,13 @@
     <includeBaseDirectory>false</includeBaseDirectory>
     <files>
         <file>
-            <source>${project.build.directory}${file.separator}${artifactId}</source>
+            <source>${project.build.directory}${file.separator}product-binary</source>
             <outputDirectory>${file.separator}</outputDirectory>
             <destName>product-binary</destName>
             <fileMode>777</fileMode>
         </file>
         <file>
-            <source>src/main/config/bootstrap</source>
+            <source>src${file.separator}main${file.separator}config${file.separator}bootstrap</source>
             <outputDirectory>${file.separator}</outputDirectory>
             <destName>bootstrap</destName>
             <fileMode>777</fileMode>
