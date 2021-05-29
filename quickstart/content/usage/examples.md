@@ -82,13 +82,12 @@ All his project code is available on Github.
 <span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
 <span><img src="/aws/cdk.png" title="CDK" width="32"></span>
 <span><img src="/quarkus_icon_rgb_32px_default.png" title="Quarkus"></span>
-
-29 Mar 2021
+<span style="float:right">29 Mar 2021<span>
 
 [Jettro Coenradie](https://twitter.com/jettroCoenradie) uses Quarkus to build a low latency Lambda function with an INIT
 time of less than 200ms. He shows how to use CDK in combination with Quarkus to deploy to AWS.
 
-
+[<img src="/github/GitHub-Mark-32px.png">](https://github.com/luminis-ams/aws-cdk-examples/tree/main/aws-quarkus-lambda)
 <--->
 
 
