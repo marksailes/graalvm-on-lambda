@@ -15,6 +15,7 @@ weight: 30
 <span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
 <span><img src="/aws/Arch_Database/32/Arch_Amazon-DynamoDB_32.svg" title="Amazon DynamoDB"></span>
 <span><img src="/aws/sam_squirrel.jpeg" title="AWS SAM" width="32"></span>
+<span><img src="/quarkus_icon_rgb_32px_default.png" title="Quarkus"></span>
 
 This blog post shows you an effective approach for implementing a Java-based application and compiling it into a native-image through Quarkus.
 
@@ -79,6 +80,8 @@ All his project code is available on Github.
 [<img src="/usage/examples/does-not-have-to-be-slow.png" alt="Java with Lambda does not have to be slow" class="img-responsive">](https://www.luminis.eu/blog/cloud-en/java-with-lambda-does-not-have-to-be-slow/)
 
 <span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
+<span><img src="/aws/cdk.png" title="CDK" width="32"></span>
+<span><img src="/quarkus_icon_rgb_32px_default.png" title="Quarkus"></span>
 
 29 Mar 2021
 
