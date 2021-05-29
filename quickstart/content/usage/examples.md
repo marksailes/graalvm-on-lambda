@@ -74,3 +74,20 @@ All his project code is available on Github.
 [<img src="/github/GitHub-Mark-32px.png">](https://github.com/luontola/native-clojure-lambda)
 
 {{< /columns >}}
+
+{{< columns >}}
+[<img src="/usage/examples/does-not-have-to-be-slow.png" alt="Java with Lambda does not have to be slow" class="img-responsive">](https://www.luminis.eu/blog/cloud-en/java-with-lambda-does-not-have-to-be-slow/)
+
+<span><img src="/aws/Arch_Compute/32/Arch_AWS-Lambda_32.svg" title="AWS Lambda"></span>
+
+29 Mar 2021
+
+[Jettro Coenradie](https://twitter.com/jettroCoenradie) uses Quarkus to build a low latency Lambda function with an INIT
+time of less than 200ms. He shows how to use CDK in combination with Quarkus to deploy to AWS.
+
+
+<--->
+
+
+<--->
+{{< /columns >}}
