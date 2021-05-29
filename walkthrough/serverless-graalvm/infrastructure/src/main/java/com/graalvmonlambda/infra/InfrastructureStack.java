@@ -1,7 +1,14 @@
 package com.graalvmonlambda.infra;
 
+import java.util.Arrays;
+import java.util.List;
+
 import software.amazon.awscdk.core.*;
-import software.amazon.awscdk.services.apigatewayv2.*;
+import software.amazon.awscdk.services.apigatewayv2.AddRoutesOptions;
+import software.amazon.awscdk.services.apigatewayv2.HttpApi;
+import software.amazon.awscdk.services.apigatewayv2.HttpApiProps;
+import software.amazon.awscdk.services.apigatewayv2.HttpMethod;
+import software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion;
 import software.amazon.awscdk.services.apigatewayv2.integrations.LambdaProxyIntegration;
 import software.amazon.awscdk.services.apigatewayv2.integrations.LambdaProxyIntegrationProps;
 import software.amazon.awscdk.services.lambda.Code;
@@ -9,20 +16,48 @@ import software.amazon.awscdk.services.lambda.Function;
 import software.amazon.awscdk.services.lambda.FunctionProps;
 import software.amazon.awscdk.services.lambda.Runtime;
 import software.amazon.awscdk.services.logs.RetentionDays;
+import software.amazon.awscdk.services.s3.assets.AssetOptions;
 
 import static java.util.Collections.singletonList;
+import static software.amazon.awscdk.core.BundlingOutput.ARCHIVED;
 
 public class InfrastructureStack extends Stack {
-    public InfrastructureStack(final Construct scope, final String id) {
-        this(scope, id, null);
+    public InfrastructureStack(final Construct parent, final String id) {
+        this(parent, id, null);
     }
 
-    public InfrastructureStack(final Construct scope, final String id, final StackProps props) {
-        super(scope, id, props);
+    public InfrastructureStack(final Construct parent, final String id, final StackProps props) {
+        super(parent, id, props);
+
+        List<String> functionOnePackagingInstructions = Arrays.asList(
+//                "/bin/sh",
+                "-c",
+                "cd products " +
+                        "&& mvn clean install -P native-image "
+                       + "&& cp /asset-input/products/target/function.zip /asset-output/"
+        );
+
+        BundlingOptions.Builder builderOptions = BundlingOptions.builder()
+                .command(functionOnePackagingInstructions)
+                .image(DockerImage.fromRegistry("marksailes/al2-graalvm"))
+                .volumes(singletonList(
+                        // Mount local .m2 repo to avoid download all the dependencies again inside the container
+                        DockerVolume.builder()
+                                .hostPath(System.getProperty("user.home") + "/.m2/")
+                                .containerPath("/root/.m2/")
+                                .build()
+                ))
+                .user("root")
+                .outputType(ARCHIVED);
 
         Function productFunction = new Function(this, "ProductFunction", FunctionProps.builder()
                 .runtime(Runtime.JAVA_11)
-                .code(Code.fromAsset("../software/products/target/product.jar"))
+                .code(Code.fromAsset("../software/", AssetOptions.builder()
+                        .bundling(builderOptions
+                                .command(functionOnePackagingInstructions)
+                                .build())
+                        .build()))
+//                .code(Code.fromAsset("../software/products/target/product.jar"))
                 .handler("com.graalvmonlambda.product.ProductRequestHandler")
                 .memorySize(1024)
                 .logRetention(RetentionDays.ONE_WEEK)
