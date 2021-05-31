@@ -1,0 +1,11 @@
+[
+  {
+    "name": "com.graalvmonlambda.product.ProductRequestHandler",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredClasses": true,
+    "allPublicClasses": true
+  }
+]
