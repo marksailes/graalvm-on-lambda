@@ -22,6 +22,7 @@ import static java.util.Collections.singletonList;
 import static software.amazon.awscdk.core.BundlingOutput.ARCHIVED;
 
 public class InfrastructureStack extends Stack {
+
     public InfrastructureStack(final Construct parent, final String id) {
         this(parent, id, null);
     }
