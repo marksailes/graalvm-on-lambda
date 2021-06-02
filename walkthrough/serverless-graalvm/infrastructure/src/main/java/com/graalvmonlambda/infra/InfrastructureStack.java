@@ -52,7 +52,7 @@ public class InfrastructureStack extends Stack {
                 .outputType(ARCHIVED);
 
         Function productFunction = new Function(this, "ProductFunction", FunctionProps.builder()
-                .runtime(Runtime.JAVA_11)
+                .runtime(Runtime.PROVIDED_AL2)
                 .code(Code.fromAsset("../software/", AssetOptions.builder()
                         .bundling(builderOptions
                                 .command(functionOnePackagingInstructions)

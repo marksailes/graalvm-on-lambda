@@ -9,6 +9,8 @@ public class ProductRequestHandler implements RequestHandler<APIGatewayV2HTTPEve
 
     @Override
     public APIGatewayV2HTTPResponse handleRequest(APIGatewayV2HTTPEvent event, Context context) {
+        context.getLogger().log(event.getRequestContext().getRequestId());
+
         return APIGatewayV2HTTPResponse.builder()
                 .withStatusCode(200)
                 .build();
