@@ -78,7 +78,7 @@ it knows which class we want it to run.
 <dependency>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-lambda-java-runtime-interface-client</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 
@@ -92,16 +92,22 @@ I keep the bootstrap file in `src/main/config` there might be a more correct pla
                 └── bootstrap
 ```
 
-The contents is very simple. Execute my binary passing my handler as the only argument.
+The contents is very simple. Execute my binary passing the `$_HANDLER` environment variable as
+the only argument. This is the value you give in the `handler` attribute when you create a 
+Lambda function.
 
 ```bash
 #!/usr/bin/env bash
 
-./product-binary com.graalvmonlambda.product.ProductRequestHandler
+./product-binary $_HANDLER
 ```
 
+I could hard code the package, class and method here instead of using the env var, but I like this
+way as I imagine it'll reduce copy and paste errors.
+
 Finally use the `maven-assembly-plugin` to create a zip file including both the native binary
-and the bootstrap. Add the plugin definition to the `native-image` profile.
+and the bootstrap. Add the plugin definition to the `native-image` profile. This will create a 
+final zip file named `function.zip`.
 
 ```xml
 <plugin>
@@ -128,6 +134,15 @@ and the bootstrap. Add the plugin definition to the `native-image` profile.
 </plugin>
 ```
 
+The assembly is located here.
+
+```bash
+└── products
+    └── src
+        └── assembly
+            └── zip.xml
+```
+
 The assembly descriptor is this.
 
 ```xml
@@ -141,13 +156,13 @@ The assembly descriptor is this.
     <includeBaseDirectory>false</includeBaseDirectory>
     <files>
         <file>
-            <source>${project.build.directory}${file.separator}${artifactId}</source>
+            <source>${project.build.directory}${file.separator}product-binary</source>
             <outputDirectory>${file.separator}</outputDirectory>
             <destName>product-binary</destName>
             <fileMode>777</fileMode>
         </file>
         <file>
-            <source>src/main/config/bootstrap</source>
+            <source>src${file.separator}main${file.separator}config${file.separator}bootstrap</source>
             <outputDirectory>${file.separator}</outputDirectory>
             <destName>bootstrap</destName>
             <fileMode>777</fileMode>
