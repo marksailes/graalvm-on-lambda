@@ -26,7 +26,7 @@ normal `mvn clean install` with our `native-image` profile.
 Bundling options allows us to specify the image, which can be for a public repo like dockerhub.
 We mount our local `~/.m2` folder to speed up builds.
 
-[InfrastructureStack.java](https://github.com/marksailes/graalvm-on-lambda/blob/eb151835495afbaea85928d0fa3031f7baa6a0d3/walkthrough/serverless-graalvm/infrastructure/src/main/java/com/graalvmonlambda/infra/InfrastructureStack.java#L33)
+[InfrastructureStack.java](https://github.com/marksailes/graalvm-on-lambda/blob/a45e3505c2abb74e279ef13faaac31cc4ce2ce76/walkthrough/serverless-graalvm/infrastructure/src/main/java/com/graalvmonlambda/infra/InfrastructureStack.java#L33)
 
 ```java
 List<String> functionOnePackagingInstructions = Arrays.asList(
@@ -52,7 +52,7 @@ BundlingOptions.Builder builderOptions = BundlingOptions.builder()
 Our function changes in a number of ways. We move from a `JAVA_11` runtime to `PROVIDED_AL2`.
 The code come from the docker output, and we can reduce the memory size.
 
-[InfrastructureStack.java](https://github.com/marksailes/graalvm-on-lambda/blob/eb151835495afbaea85928d0fa3031f7baa6a0d3/walkthrough/serverless-graalvm/infrastructure/src/main/java/com/graalvmonlambda/infra/InfrastructureStack.java#L54)
+[InfrastructureStack.java](https://github.com/marksailes/graalvm-on-lambda/blob/a45e3505c2abb74e279ef13faaac31cc4ce2ce76/walkthrough/serverless-graalvm/infrastructure/src/main/java/com/graalvmonlambda/infra/InfrastructureStack.java#L52)
 
 ```java
 Function productFunction = new Function(this, "ProductFunction", FunctionProps.builder()
