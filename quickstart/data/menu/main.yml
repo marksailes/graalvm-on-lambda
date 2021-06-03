@@ -20,6 +20,8 @@ main:
         ref: "/walkthrough/initial-infra"
       - name: Convert function to GraalVM
         ref: "/walkthrough/convert-to-graalvm"
+      - name: CDK & Docker for native-image
+        ref: "/walkthrough/cdk-docker-build"
   - name: Building
     sub:
       - name: with Docker

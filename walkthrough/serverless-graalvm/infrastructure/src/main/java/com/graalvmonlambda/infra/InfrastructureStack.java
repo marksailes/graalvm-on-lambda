@@ -31,7 +31,6 @@ public class InfrastructureStack extends Stack {
         super(parent, id, props);
 
         List<String> functionOnePackagingInstructions = Arrays.asList(
-//                "/bin/sh",
                 "-c",
                 "cd products " +
                         "&& mvn clean install -P native-image "
@@ -42,7 +41,6 @@ public class InfrastructureStack extends Stack {
                 .command(functionOnePackagingInstructions)
                 .image(DockerImage.fromRegistry("marksailes/al2-graalvm"))
                 .volumes(singletonList(
-                        // Mount local .m2 repo to avoid download all the dependencies again inside the container
                         DockerVolume.builder()
                                 .hostPath(System.getProperty("user.home") + "/.m2/")
                                 .containerPath("/root/.m2/")
@@ -54,13 +52,10 @@ public class InfrastructureStack extends Stack {
         Function productFunction = new Function(this, "ProductFunction", FunctionProps.builder()
                 .runtime(Runtime.PROVIDED_AL2)
                 .code(Code.fromAsset("../software/", AssetOptions.builder()
-                        .bundling(builderOptions
-                                .command(functionOnePackagingInstructions)
-                                .build())
+                        .bundling(builderOptions.build())
                         .build()))
-//                .code(Code.fromAsset("../software/products/target/product.jar"))
                 .handler("com.graalvmonlambda.product.ProductRequestHandler")
-                .memorySize(1024)
+                .memorySize(256)
                 .logRetention(RetentionDays.ONE_WEEK)
                 .build());
 
