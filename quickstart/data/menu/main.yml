@@ -22,6 +22,10 @@ main:
         ref: "/walkthrough/convert-to-graalvm"
       - name: CDK & Docker for native-image
         ref: "/walkthrough/cdk-docker-build"
+      - name: GraalVM Configuration
+        ref: "/walkthrough/graalvm-config"
+      - name: Generating GraalVM Configuration
+        ref: "/walkthrough/generating-graalvm-config"
   - name: Building
     sub:
       - name: with Docker
