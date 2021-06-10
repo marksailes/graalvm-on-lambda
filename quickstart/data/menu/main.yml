@@ -26,6 +26,8 @@ main:
         ref: "/walkthrough/graalvm-config"
       - name: Generating GraalVM Configuration
         ref: "/walkthrough/generating-graalvm-config"
+      - name: Native Image Performance
+        ref: "/walkthrough/graalvm-performance"
   - name: Building
     sub:
       - name: with Docker

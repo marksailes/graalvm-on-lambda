@@ -72,6 +72,24 @@ public class InfrastructureStack extends Stack {
                         .build()))
                 .build());
 
+
+        Function productFunctionJvm = new Function(this, "ProductFunctionJVM", FunctionProps.builder()
+                .runtime(Runtime.JAVA_11)
+                .code(Code.fromAsset("../software/products/target/product.jar"))
+                .handler("com.graalvmonlambda.product.ProductRequestHandler")
+                .memorySize(2048)
+                .logRetention(RetentionDays.ONE_WEEK)
+                .build());
+
+        httpApi.addRoutes(AddRoutesOptions.builder()
+                .path("/product-jvm")
+                .methods(singletonList(HttpMethod.GET))
+                .integration(new LambdaProxyIntegration(LambdaProxyIntegrationProps.builder()
+                        .handler(productFunctionJvm)
+                        .payloadFormatVersion(PayloadFormatVersion.VERSION_2_0)
+                        .build()))
+                .build());
+
         CfnOutput apiUrl = new CfnOutput(this, "ProductApiUrl", CfnOutputProps.builder()
                 .exportName("ProductApiUrl")
                 .value(httpApi.getApiEndpoint())
