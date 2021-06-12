@@ -1,0 +1,42 @@
+<div class="feedback">
+    <span><img id="helpful-feedback" src="/feedback/thumb-up-empty.svg" title="Helpful" width="32"></span>
+    <span><img id="unhelpful-feedback" src="/feedback/thumb-down-empty.svg" title="Unhelpful" width="32"></span>
+</div>
+
+<script>
+const url = 'https://ae3pq4z9v2.execute-api.eu-west-1.amazonaws.com/feedback';
+var pathname = window.location.pathname;
+const helpfuldata = {
+    "page": pathname,
+    "rating": "helpful"
+}
+
+$('#helpful-feedback').click(function() {
+    $.post(url, JSON.stringify(helpfuldata), function(helpfuldata, status) {
+        console.log(`${helpfuldata} and status is ${status}`)
+    })
+    .done(function() {
+        console.log(`done`);
+        $('#unhelpful-feedback').hide();
+        $('#helpful-feedback').off("click");
+        $('#helpful-feedback').attr("src", "/feedback/thumb-up-filled.svg");
+    });
+});
+
+const unhelpfuldata = {
+    "page": pathname,
+    "rating": "unhelpful"
+}
+
+$('#unhelpful-feedback').click(function() {
+    var result = $.post(url, JSON.stringify(unhelpfuldata), function(unhelpfuldata, status) {
+        console.log(`${unhelpfuldata} and status is ${status}`);
+    })
+    .done(function() {
+        console.log(`done`);
+        $('#helpful-feedback').hide();
+        $('#unhelpful-feedback').off("click");
+        $('#unhelpful-feedback').attr("src", "/feedback/thumb-down-filled.svg");
+    });
+});
+</script>
