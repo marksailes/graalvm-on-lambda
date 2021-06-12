@@ -1,6 +1,7 @@
 baseURL = "https://graalvmonlambda.com"
 title = "GraalVM on Lambda"
 theme = "hugo-geekdoc"
+enableRobotsTXT = true
 
 pluralizeListTitles = false
 
