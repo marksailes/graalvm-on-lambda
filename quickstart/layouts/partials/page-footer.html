@@ -43,8 +43,8 @@
 {{ end }}
 
 <div class="feedback">
-    <span><img id="helpful-feedback" src="/feedback/thumb-up-empty.svg" title="Helpful" width="32"></span>
-    <span><img id="unhelpful-feedback" src="/feedback/thumb-down-empty.svg" title="Unhelpful" width="32"></span>
+    <span><img id="helpful-feedback" src="/feedback/thumb-up-empty.svg" title="This page is helpful" width="32"></span>
+    <span><img id="unhelpful-feedback" src="/feedback/thumb-down-empty.svg" title="This page is unhelpful" width="32"></span>
 </div>
 
 <script>
@@ -61,7 +61,7 @@ $('#helpful-feedback').click(function() {
     })
     .done(function() {
         console.log(`done`);
-        $('#unhelpful-feedback').hide();
+        $('#unhelpful-feedback').off("click");
         $('#helpful-feedback').off("click");
         $('#helpful-feedback').attr("src", "/feedback/thumb-up-filled.svg");
     });
@@ -78,7 +78,7 @@ $('#unhelpful-feedback').click(function() {
     })
     .done(function() {
         console.log(`done`);
-        $('#helpful-feedback').hide();
+        $('#helpful-feedback').off("click");
         $('#unhelpful-feedback').off("click");
         $('#unhelpful-feedback').attr("src", "/feedback/thumb-down-filled.svg");
     });
