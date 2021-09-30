@@ -28,6 +28,9 @@ main:
         ref: "/walkthrough/generating-graalvm-config"
       - name: Native Image Performance
         ref: "/walkthrough/graalvm-performance"
+      - name: Native Image on ARM
+        ref: "/walkthrough/arm-architecture"
+
   - name: Building
     sub:
       - name: with Docker

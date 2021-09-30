@@ -11,9 +11,7 @@ import software.amazon.awscdk.services.apigatewayv2.HttpMethod;
 import software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion;
 import software.amazon.awscdk.services.apigatewayv2.integrations.LambdaProxyIntegration;
 import software.amazon.awscdk.services.apigatewayv2.integrations.LambdaProxyIntegrationProps;
-import software.amazon.awscdk.services.lambda.Code;
-import software.amazon.awscdk.services.lambda.Function;
-import software.amazon.awscdk.services.lambda.FunctionProps;
+import software.amazon.awscdk.services.lambda.*;
 import software.amazon.awscdk.services.lambda.Runtime;
 import software.amazon.awscdk.services.logs.RetentionDays;
 import software.amazon.awscdk.services.s3.assets.AssetOptions;
@@ -39,7 +37,7 @@ public class InfrastructureStack extends Stack {
 
         BundlingOptions.Builder builderOptions = BundlingOptions.builder()
                 .command(functionOnePackagingInstructions)
-                .image(DockerImage.fromRegistry("marksailes/al2-graalvm:al2-21.2.0"))
+                .image(DockerImage.fromRegistry("marksailes/arm64-al2-graalvm:al2-21.2.0"))
                 .volumes(singletonList(
                         DockerVolume.builder()
                                 .hostPath(System.getProperty("user.home") + "/.m2/")
@@ -57,6 +55,7 @@ public class InfrastructureStack extends Stack {
                 .handler("com.graalvmonlambda.product.ProductRequestHandler")
                 .memorySize(256)
                 .logRetention(RetentionDays.ONE_WEEK)
+                .architectures(singletonList(Architecture.ARM_64))
                 .build());
 
         HttpApi httpApi = new HttpApi(this, "GraalVMOnLambdaAPI", HttpApiProps.builder()

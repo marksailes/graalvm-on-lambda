@@ -2,3 +2,4 @@
 /.gradle/
 /walkthrough/serverless-graalvm/software/products/products.iml
 /walkthrough/serverless-graalvm/software/products/target/
+/walkthrough/serverless-graalvm-arm64/software/products/target/
