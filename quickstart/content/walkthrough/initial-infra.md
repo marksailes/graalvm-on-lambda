@@ -39,6 +39,8 @@ The initial project will look like this.
 
 We'll rename the packages and add a Lambda function and API Gateway (HTTP API) to `InfrastructureStack.java`.
 
+[InfrastructureStack.java](https://github.com/marksailes/graalvm-on-lambda/blob/main/walkthrough/serverless-graalvm/infrastructure/src/main/java/com/graalvmonlambda/infra/InfrastructureStack.java)
+
 ```java
 package com.graalvmonlambda.infra;
 
