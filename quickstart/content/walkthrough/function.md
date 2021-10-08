@@ -8,6 +8,8 @@ weight: 20
 
 Lets start with a simple `pom.xml`
 
+[pom.xml](https://github.com/marksailes/graalvm-on-lambda/blob/main/walkthrough/serverless-graalvm/software/products/pom.xml)
+
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
@@ -61,6 +63,8 @@ Lets start with a simple `pom.xml`
 ```
 
 And a simple `RequestHandler` which recieves events from Amazon API Gateway.
+
+[ProductRequestHandler.java](https://github.com/marksailes/graalvm-on-lambda/blob/main/walkthrough/serverless-graalvm/software/products/src/main/java/com/graalvmonlambda/product/ProductRequestHandler.java)
 
 ```java
 package com.graalvmonlambda.product;

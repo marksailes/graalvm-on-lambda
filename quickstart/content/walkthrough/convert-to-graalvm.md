@@ -19,6 +19,8 @@ suitable native binary which can be run on AWS Lambda.
 You can use a maven profile to toggle which type of build you want. This means you can continue to
 iterate quickly with the standard build and only build the slower native image when necessary.
 
+[pom.xml](https://github.com/marksailes/graalvm-on-lambda/blob/main/walkthrough/serverless-graalvm/software/products/pom.xml)
+
 ```xml
 <profiles>
     <profile>
@@ -96,6 +98,8 @@ The contents is very simple. Execute my binary passing the `$_HANDLER` environme
 the only argument. This is the value you give in the `handler` attribute when you create a 
 Lambda function.
 
+[bootstrap](https://github.com/marksailes/graalvm-on-lambda/blob/main/walkthrough/serverless-graalvm/software/products/src/main/config/bootstrap)
+
 ```bash
 #!/usr/bin/env bash
 
@@ -108,6 +112,8 @@ way as I imagine it'll reduce copy and paste errors.
 Finally use the `maven-assembly-plugin` to create a zip file including both the native binary
 and the bootstrap. Add the plugin definition to the `native-image` profile. This will create a 
 final zip file named `function.zip`.
+
+[zip.xml](https://github.com/marksailes/graalvm-on-lambda/blob/main/walkthrough/serverless-graalvm/software/products/src/assembly/zip.xml)
 
 ```xml
 <plugin>

@@ -9,6 +9,8 @@ weight: 60
 Curious people will have noticed that my example project has a number of additional `.json` and `.properties` files
 in the `src/main/resouces` folder.
 
+[src/main/resouces](https://github.com/marksailes/graalvm-on-lambda/tree/main/walkthrough/serverless-graalvm/software/products/src/main/resources)
+
 ```bash
 └── software
     └── products
@@ -93,6 +95,8 @@ I'm currently working on pull requests for the libraries listed above.
 So, if those libraries had the correct config included, would we the application developer need to add anything?
 
 Yes, we need to tell `native-image` that our handler is required.
+
+[reflect-config.json](https://github.com/marksailes/graalvm-on-lambda/blob/main/walkthrough/serverless-graalvm/software/products/src/main/resources/META-INF/native-image/com.graalvmonlambda/products/reflect-config.json)
 
 ```json
 [
