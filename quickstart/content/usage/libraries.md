@@ -10,18 +10,11 @@ weight: 50
 
 Please add the follow badge to help developers know your library is GraalVM ready.
 
-<img src="https://img.shields.io/badge/GraalVM-Enabled-orange?style=plastic">
-
-GitHub Markdown
-{{< highlight md "linenos=table" >}}
-![GraalVM Enabled](https://img.shields.io/badge/GraalVM-Enabled-orange?style=plastic)
-{{< /highlight >}}
-
 <img src="https://img.shields.io/badge/GraalVM-Ready-orange?style=plastic">
 
 GitHub Markdown
 {{< highlight md "linenos=table" >}}
-![GraalVM Enabled](https://img.shields.io/badge/GraalVM-Ready-orange?style=plastic)
+![GraalVM Ready](https://img.shields.io/badge/GraalVM-Ready-orange?style=plastic)
 {{< /highlight >}}
 
 {{< columns >}}
